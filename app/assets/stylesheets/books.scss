@@ -1,0 +1,90 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 33px;
+}
+
+// header, h1, nav, .list-comment {
+//   font-family: 'Kaushan', cursive, sans-serif;
+// }
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 19.5px;
+}
+
+a {
+  font-size: 13px;
+}
+
+p,th,td  {
+  font-size: 13px;
+  margin: 33px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+}
+
+input{
+  padding: 1px 6px;
+}
+
+
+.top_link {
+  font-size: 13px;
+  margin: 33px;
+}
+
+th {
+  padding: 1px 1px 5px;
+}
+
+td {
+  padding: 1px 5px 7px;
+}
+
+.field {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input#title {
+  padding: 1px 2px;
+}
+
+textarea#body {
+  padding: 2px;
+}
+
+.partition {
+  display: inline-block;
+  font-size: 13px;
+}
+
+.edit-title {
+  margin: 1rem 0;
+}
+
+.actions {
+  margin-bottom: 10px;
+}
+
+.text-success {
+  color: #008000;
+}
+
+.text-danger {
+  color: #CC0000;
+}
