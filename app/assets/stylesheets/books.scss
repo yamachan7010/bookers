@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-size: 13px;
   box-sizing: border-box;
 }
 
@@ -21,15 +22,24 @@ h1 {
 
 h2 {
   font-size: 19.5px;
+  margin: 16px 0;
 }
 
 a {
   font-size: 13px;
+  &:visited {
+    color: #666;
+  }
 }
 
 p,th,td  {
   font-size: 13px;
+  line-height: 18px;
   margin: 33px;
+}
+ul {
+  font-size: 12px;
+  padding:33px;
 }
 
 label {
@@ -38,7 +48,7 @@ label {
 }
 
 input{
-  padding: 1px 6px;
+  padding: 1px 2px;
 }
 
 
@@ -68,10 +78,10 @@ textarea#body {
   padding: 2px;
 }
 
-.partition {
-  display: inline-block;
-  font-size: 13px;
-}
+// .partition {
+//   display: inline-block;
+//   font-size: 13px;
+// }
 
 .edit-title {
   margin: 1rem 0;
@@ -81,10 +91,65 @@ textarea#body {
   margin-bottom: 10px;
 }
 
-.text-success {
-  color: #008000;
+.create-botton {
+  padding: 1px 6px;
 }
 
-.text-danger {
-  color: #CC0000;
+.messege {
+  color: green;
+}
+
+.field_with_errors {
+  display: table;
+  background-color: red;
+  padding: 2px;
+  label {
+    background-color: red;
+  }
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid #ff0000;
+//   padding: 7px:
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    font-size: 12px;
+    padding: 5px 5px 5px 15px;
+    margin: 0;
+    background-color: #cc0000;
+    color: #fff;
+  }
+  ul {
+    padding: 0;
+    padding-left: 40px;
+    margin: 33px;
+  }
+}
+
+.back {
+  color: #666;
+}
+.back:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+.show,
+.edit,
+.destroy {
+  color: #000;
+}
+
+.show:hover,
+.edit:hover,
+.destroy:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.help-block {
+  display: none;
 }

@@ -1,22 +1,38 @@
 <h1 class="edit-title">Editing Book</h1>
+
+<%= form_with(model:@book, local: true) do |form| %> <!--バリデーションチェック-->
+  <% if @book.errors.any? %> <!--ここからエラ〜メッセージ-->
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+        <% @book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
+
+
 <!-- form_with部分 -->
-<%= form_with model: @book do |f| %>
+<%= form_with model:@book, url:book_path(@book), local:true do |f| %>
   <div class="field">
-    <label>Title</label>
+    <%= f.label :title, 'Title' %>
     <%= f.text_field :title %>
 	</div>
 	<div class="field">
-    <label>Body</label>
+    <%= f.label :body, 'Body' %>
     <%= f.text_area :body %>
   </div>
   <div class="actions">
-    <%= f.submit 'Update Book'  %>
+    <%= f.submit 'Update Book', class: 'create-botton' %>
   </div>
-  
+
 <% end %>
 
 <div>
-  <%= link_to "Show", book_path(@book.id) %>
-  <div class="partition">|</div>
-  <%= link_to "Back", books_path(@book.id) %>
+  <%= link_to "Show", book_path(@book.id), class: 'show' %>
+  <%= "  |  "  %>
+  <%= link_to "Back", books_path, class: 'back' %>
 </div>

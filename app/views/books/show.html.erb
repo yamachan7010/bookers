@@ -1,9 +1,8 @@
-<p class="text-success">
-  <%= flash[:notice] %>
-</p>
-<p class="text-danger">
-  <%= flash[:alart] %>
-</p>
+<div class="messege">
+  <p id="notice">
+    <%= notice %> <!--サクセスメッセージ-->
+  </p>
+</div>
 
 <p>
   <strong>Title:</strong>
@@ -16,7 +15,7 @@
 </p>
 
 <div>
-  <%= link_to "Edit", edit_book_path(@book.id) %>
-  <div class="partition">|</div>
-  <%= link_to "Back", books_path(@book.id) %>
+  <%= link_to "Edit", edit_book_path(@book.id), class: 'edit' %>
+  <%= "  |  " %>
+  <%= link_to "Back", books_path, class: 'back' %>
 </div>

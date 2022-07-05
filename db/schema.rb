@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_06_29_121716) do
 
-  create_table "book", force: :cascade do |t|
+  create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "body"
     t.datetime "created_at", precision: 6, null: false
